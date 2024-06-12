@@ -16,10 +16,17 @@ body {
   background: #21201f;
 }
 
-a {
+a,
+p {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #dddddd;
+  color: #fff;
+}
+
+span {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #fff;
 }
 
 @media (max-width: 1366px) {

@@ -29,23 +29,27 @@ export const LeftPanel = styled.div`
 
   & p {
     color: #3a3734;
-    font-size: 20px;
     max-width: 500px;
+    font-family: 'Inter', sans-serif;
   }
 `;
 
 export const LearnMoreButton = styled.button`
   border-width: 0;
-  width: 160px;
+  width: fit-content;
+  padding: 0 2rem;
   height: 40px;
   background: ${(props) => props.theme.primary};
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 700;
+
   border-radius: 4px;
-  text-align: center;
   cursor: pointer;
   transition: 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+
+  & span {
+    font-weight: 700;
+    text-align: center;
+  }
 
   &:hover {
     background: #f5bf04;

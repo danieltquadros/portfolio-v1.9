@@ -12,13 +12,15 @@ const About = () => {
   return (
     <AboutContainer id="about">
       <LeftPanel>
-        <h2>About</h2>
+        <h2>Sobre</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita
           odit similique provident necessitatibus, natus laboriosam quasi quos,
           eligendi accusantium libero molestiae, sequi doloribus beatae at!
         </p>
-        <LearnMoreButton>Learn More</LearnMoreButton>
+        <LearnMoreButton>
+          <span>Entre em Contato</span>
+        </LearnMoreButton>
       </LeftPanel>
       <RightPanel>
         <BackPanel />

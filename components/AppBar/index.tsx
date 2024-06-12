@@ -6,11 +6,11 @@ const AppBar = () => {
     <AppBarContainer>
       <div style={{ width: '50px', height: '50px', background: '#CCC' }} />
       <MainMenu>
-        <AppBarButton link="/#welcome">Home</AppBarButton>
-        <AppBarButton link="/#about">About</AppBarButton>
-        <AppBarButton link="/#projects">Projects</AppBarButton>
-        <AppBarButton link="/#welcome">Services</AppBarButton>
-        <AppBarButton link="/#welcome">Contact</AppBarButton>
+        <AppBarButton link="/#welcome">Início</AppBarButton>
+        <AppBarButton link="/#welcome">Serviços</AppBarButton>
+        <AppBarButton link="/#projects">Projetos</AppBarButton>
+        <AppBarButton link="/#about">Sobre</AppBarButton>
+        <AppBarButton link="/#welcome">Contatos</AppBarButton>
       </MainMenu>
     </AppBarContainer>
   );
