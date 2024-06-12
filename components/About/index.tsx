@@ -10,7 +10,7 @@ import {
 
 const About = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <LeftPanel>
         <h2>About</h2>
         <p>

@@ -1,18 +1,18 @@
 import React from 'react';
 
-const WelcomePage = () => {
+const Projects = () => {
   return (
     <div
-      id="welcome"
+      id="projects"
       style={{
         width: '100vw',
         height: '100vh',
         padding: '90px 8vw 0 8vw',
       }}
     >
-      WelcomePage
+      Projects
     </div>
   );
 };
 
-export default WelcomePage;
+export default Projects;

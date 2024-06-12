@@ -7,6 +7,7 @@ import styles from './page.module.css';
 import AppBar from '@/components/AppBar';
 import WelcomePage from '@/components/WelcomePage';
 import About from '@/components/About';
+import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <AppBar />
         <WelcomePage />
         <About />
+        <Projects />
       </main>
     </ThemeProvider>
   );

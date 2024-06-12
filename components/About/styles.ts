@@ -7,6 +7,7 @@ export const AboutContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 8vw;
 `;
 
 export const LeftPanel = styled.div`
