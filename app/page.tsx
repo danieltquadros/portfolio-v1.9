@@ -11,12 +11,16 @@ import Projects from '@/components/Projects';
 import Services from '@/components/Services';
 import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
+// import SocialMenu from '@/components/SocialMenu';
+// import NavigationMenu from '@/components/NavigationMenu';
 
 export default function Home() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <main className={styles.main}>
         <AppBar />
+        {/* <SocialMenu />
+        <NavigationMenu /> */}
         <WelcomePage />
         <Services />
         <Skills />

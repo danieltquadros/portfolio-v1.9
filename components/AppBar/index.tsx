@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import AppBarButton from './components/AppBarButton';
-import { AppBarContainer, MainMenu } from './styles';
+import { AppBarContainer, LogoTemp, MainMenu } from './styles';
 
 import { ActiveLink } from './components/AppBarButton/styles';
 
@@ -132,7 +132,7 @@ const AppBar = () => {
 
   return (
     <AppBarContainer>
-      <div style={{ width: '50px', height: '50px', background: '#CCC' }} />
+      <LogoTemp />
       <MainMenu>
         {linkList.map((lk: LinkType, index: number) => {
           return (

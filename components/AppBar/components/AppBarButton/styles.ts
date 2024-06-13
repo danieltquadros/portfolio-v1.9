@@ -26,6 +26,7 @@ export const ButtonContainer = styled.div<ButtonContainerProps>`
         ? props.theme.darkness
         : props.theme.lightness};
     line-height: 1;
+    font-size: 2.5rem;
     transition: 0.3s ease;
   }
 
@@ -35,5 +36,29 @@ export const ButtonContainer = styled.div<ButtonContainerProps>`
 
   &:hover a {
     color: ${(props) => props.theme.darkness};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.fk}) {
+    a {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tk}) {
+    a {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.hd}) {
+    a {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    a {
+      font-size: 1.25rem;
+    }
   }
 `;
