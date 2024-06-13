@@ -1,18 +1,8 @@
 import React from 'react';
+import { WelcomePageContainer } from './styles';
 
 const WelcomePage = () => {
-  return (
-    <div
-      id="welcome"
-      style={{
-        width: '100vw',
-        height: '100vh',
-        padding: '90px 8vw 0 8vw',
-      }}
-    >
-      WelcomePage
-    </div>
-  );
+  return <WelcomePageContainer id="welcome">WelcomePage</WelcomePageContainer>;
 };
 
 export default WelcomePage;

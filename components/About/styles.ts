@@ -3,18 +3,18 @@ import styled from 'styled-components';
 export const AboutContainer = styled.section`
   height: 100vh;
   width: 100vw;
-  background-color: #3a3734;
+  background: ${(props) => props.theme.darkness};
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 8vw;
+  padding: 90px 8vw 0 8vw;
 `;
 
 export const LeftPanel = styled.div`
   width: 40vw;
   height: 70vh;
   border-radius: 4px 0 0 4px;
-  background-color: #ddd;
+  background-color: ${(props) => props.theme.lightness};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,13 +22,13 @@ export const LeftPanel = styled.div`
   padding: 40px;
 
   & h2 {
-    color: #3a3734;
+    color: ${(props) => props.theme.dark};
     font-size: 4rem;
     text-align: start;
   }
 
   & p {
-    color: #3a3734;
+    color: ${(props) => props.theme.dark};
     max-width: 500px;
     font-family: 'Inter', sans-serif;
   }
@@ -75,7 +75,7 @@ export const BackPanel = styled.div`
 export const ImagePanel = styled.div`
   width: 460px;
   height: 460px;
-  background: #3a3734;
+  background: ${(props) => props.theme.dark};
   position: relative;
   bottom: 360px;
   right: 40px;

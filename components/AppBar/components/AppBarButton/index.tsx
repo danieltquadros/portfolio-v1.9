@@ -1,17 +1,20 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 
-import { BottomBar, ButtonContainer } from './styles';
+import { BottomBar, ButtonContainer, ActiveLink } from './styles';
 
 interface AppBarButtonProps {
   children: ReactNode;
   link: string;
+  activeLink: ActiveLink;
 }
 
-const AppBarButton = ({ children, link }: AppBarButtonProps) => {
+const AppBarButton = ({ children, link, activeLink }: AppBarButtonProps) => {
   return (
-    <ButtonContainer>
-      <a href={link}>{children}</a>
-      <BottomBar />
+    <ButtonContainer activeLink={activeLink}>
+      <a className="active" href={link}>
+        {children}
+      </a>
+      <BottomBar activeLink={activeLink} />
     </ButtonContainer>
   );
 };

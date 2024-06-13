@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 
-export const BottomBar = styled.div`
-  width: 0;
+export type ActiveLink = 'ACTIVE' | 'INACTIVE';
+
+interface ButtonContainerProps {
+  activeLink: ActiveLink;
+}
+
+export const BottomBar = styled.div<ButtonContainerProps>`
+  width: ${(props) => (props.activeLink === 'ACTIVE' ? 100 : 0)}%;
   height: 4px;
-  background: ${(props) => props.theme.dark};
+  background: ${(props) => props.theme.darkness};
   transition: 0.3s ease;
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div<ButtonContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +21,10 @@ export const ButtonContainer = styled.div`
   gap: 0.25rem;
 
   a {
+    color: ${(props) =>
+      props.activeLink === 'ACTIVE'
+        ? props.theme.darkness
+        : props.theme.lightness};
     line-height: 1;
     transition: 0.3s ease;
   }
@@ -24,6 +34,6 @@ export const ButtonContainer = styled.div`
   }
 
   &:hover a {
-    color: ${(props) => props.theme.dark};
+    color: ${(props) => props.theme.darkness};
   }
 `;

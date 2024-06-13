@@ -12,8 +12,16 @@ export const AppBarContainer = styled.div`
   backdrop-filter: blur(5px);
   z-index: 1;
 
-  & h1 {
-    color: ${(props) => props.theme.primary};
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    background: #00f;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    background: #0f0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    background: #f00;
   }
 `;
 
