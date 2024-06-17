@@ -23,6 +23,9 @@ export const AppBarContainer = styled.div`
     padding: 0 8vw;
     height: 90px;
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 0 0 0 4vw;
+  }
 `;
 
 export const MainMenu = styled.nav`
@@ -30,6 +33,9 @@ export const MainMenu = styled.nav`
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    gap: 3rem;
+  }
 `;
 
 export const LogoTemp = styled.div`

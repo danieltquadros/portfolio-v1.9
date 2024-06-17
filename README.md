@@ -37,8 +37,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ---
 
-# Next version: "14.2.3"
+## Next version: "14.2.3"
 
-# Node version "20.14.0"
+## Node version "20.14.0"
 
-# nvm use 20.14.0
+nvm use 20.14.0

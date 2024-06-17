@@ -1,18 +1,8 @@
 import React from 'react';
+import { SkillsContainer } from './styles';
 
 const Skills = () => {
-  return (
-    <div
-      id="skills"
-      style={{
-        width: '100vw',
-        height: '100vh',
-        padding: '90px 8vw 0 8vw',
-      }}
-    >
-      Skills
-    </div>
-  );
+  return <SkillsContainer id="skills">Skills</SkillsContainer>;
 };
 
 export default Skills;

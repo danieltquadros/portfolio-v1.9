@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const ProjectsContainer = styled.section`
+export const SkillsContainer = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 90px 8vw 0 8vw;
-  background: ${(props) => props.theme.dark};
+  background: ${(props) => props.theme.darkness};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.fk}) {
     padding: 120px 12vw 0 12vw;

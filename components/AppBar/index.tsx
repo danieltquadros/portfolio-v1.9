@@ -1,10 +1,23 @@
+// React
 import { useEffect, useState } from 'react';
-import AppBarButton from './components/AppBarButton';
-import { AppBarContainer, LogoTemp, MainMenu } from './styles';
 
+// Global hooks
+import useBreakpoints from '@/hooks/useBreakpoints';
+
+// Local components
+import MiniMenu from './components/AppBarMini';
+import AppBarDefault from './components/AppBarDefault';
+import {
+  AppBarContainer,
+  LogoTemp,
+  MainMenu,
+} from './components/AppBarDefault/styles';
+
+// Styles
 import { ActiveLink } from './components/AppBarButton/styles';
+import AppBarMini from './components/AppBarMini';
 
-interface LinkType {
+export interface LinkType {
   label: string;
   link: string;
 }
@@ -37,6 +50,8 @@ const linkList: LinkType[] = [
 ];
 
 const AppBar = () => {
+  const { isMd } = useBreakpoints();
+
   const [activeLink, setActiveLink] = useState<ActiveLink[]>([
     'ACTIVE',
     'INACTIVE',
@@ -130,19 +145,10 @@ const AppBar = () => {
     };
   }, []);
 
-  return (
-    <AppBarContainer>
-      <LogoTemp />
-      <MainMenu>
-        {linkList.map((lk: LinkType, index: number) => {
-          return (
-            <AppBarButton link={lk.link} activeLink={activeLink[index]}>
-              {lk.label}
-            </AppBarButton>
-          );
-        })}
-      </MainMenu>
-    </AppBarContainer>
+  return isMd.down ? (
+    <AppBarMini linkList={linkList} activeLink={activeLink} />
+  ) : (
+    <AppBarDefault activeLink={activeLink} linkList={linkList} />
   );
 };
 

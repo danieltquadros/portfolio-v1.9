@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export type ActiveLink = 'ACTIVE' | 'INACTIVE';
 
 interface ButtonContainerProps {
-  activeLink: ActiveLink;
+  active_link: ActiveLink;
 }
 
 export const BottomBar = styled.div<ButtonContainerProps>`
-  width: ${(props) => (props.activeLink === 'ACTIVE' ? 100 : 0)}%;
+  width: ${(props) => (props.active_link === 'ACTIVE' ? 100 : 0)}%;
   height: 4px;
   background: ${(props) => props.theme.darkness};
   transition: 0.3s ease;
@@ -22,7 +22,7 @@ export const ButtonContainer = styled.div<ButtonContainerProps>`
 
   a {
     color: ${(props) =>
-      props.activeLink === 'ACTIVE'
+      props.active_link === 'ACTIVE'
         ? props.theme.darkness
         : props.theme.lightness};
     line-height: 1;
