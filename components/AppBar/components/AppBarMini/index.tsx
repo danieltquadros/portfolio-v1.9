@@ -63,15 +63,6 @@ const AppBarMini = ({ linkList, activeLink }: AppBarMiniProps) => {
             <MenuBar opened={openMenu} className={openMenu ? 'barThree' : ''} />
           </MenuIcon>
         </MiniMenuContainer>
-        {/* {isSm.only && openMenu && (
-          <div
-            style={{
-              background: '0F0',
-              width: 'calc(100vw - 300px',
-              height: '100vh',
-            }}
-          />
-        )} */}
       </div>
     </AppBarMiniContainer>
   );

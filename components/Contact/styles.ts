@@ -4,7 +4,7 @@ export const ContactContainer = styled.section`
   width: 100vw;
   height: 100vh;
   padding: 90px 8vw 0 8vw;
-  background: ${(props) => props.theme.dark};
+  background: ${(props) => props.theme.darkTwo};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.fk}) {
     padding: 120px 12vw 0 12vw;

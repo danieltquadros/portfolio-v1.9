@@ -36,7 +36,7 @@ export const MiniAppBar = styled.div<MiniMenuContainerProps>`
   align-items: center;
   height: 90px;
   width: calc(100vw - 300px);
-  background: ${(props) => props.theme.primaryDark};
+  background: ${(props) => props.theme.darkOne};
   padding-left: 4vw;
   position: relative;
   right: ${(props) => (props.opened ? 'calc(100vw - 300px)' : '0')};
@@ -52,7 +52,7 @@ export const MiniMenuContainer = styled.div<MiniMenuContainerProps>`
   display: flex;
   justify-content: space-between;
   padding-right: 4vw;
-  background: ${(props) => props.theme.primaryDark};
+  background: ${(props) => props.theme.darkOne};
   transition:
     height 0.5s ease,
     max-height 0.5s ease;
@@ -94,7 +94,7 @@ export const MenuIcon = styled.div`
 export const MenuBar = styled.div<MiniMenuContainerProps>`
   width: 50px;
   height: 6px;
-  background: ${(props) => props.theme.darkness};
+  background: ${(props) => props.theme.primary};
   transition: 0.6s ease;
 
   rotate: ${(props) => (props.opened ? '0' : '360deg')};

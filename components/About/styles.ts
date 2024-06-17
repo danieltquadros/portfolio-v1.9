@@ -42,13 +42,13 @@ export const LeftPanel = styled.div`
   padding: 40px;
 
   & h2 {
-    color: ${(props) => props.theme.dark};
+    color: ${(props) => props.theme.darkOne};
     font-size: 4rem;
     text-align: start;
   }
 
   & p {
-    color: ${(props) => props.theme.dark};
+    color: ${(props) => props.theme.darkOne};
     max-width: 500px;
     font-family: 'Inter', sans-serif;
   }
@@ -72,7 +72,7 @@ export const LearnMoreButton = styled.button`
   }
 
   &:hover {
-    background: #f5bf04;
+    background: #f5bf04; // definir cor do hover e adicionar no tema
   }
 `;
 
@@ -95,7 +95,7 @@ export const BackPanel = styled.div`
 export const ImagePanel = styled.div`
   width: 460px;
   height: 460px;
-  background: ${(props) => props.theme.dark};
+  background: ${(props) => props.theme.darkTwo};
   position: relative;
   bottom: 360px;
   right: 40px;
@@ -103,7 +103,7 @@ export const ImagePanel = styled.div`
   & img {
     width: 100%;
     height: 100%;
-    box-shadow: -10px 10px 25px 15px #121314;
+    box-shadow: -10px 10px 25px 15px ${(props) => props.theme.darkness};
     object-fit: cover;
     filter: sepia(80%);
   }

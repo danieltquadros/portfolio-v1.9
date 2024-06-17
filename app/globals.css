@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: #dddddd;
+  color: #909090;
 }
 
 html,
@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  background: #121314;
+  background: #191c20;
 }
 
 a,

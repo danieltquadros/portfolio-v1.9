@@ -9,7 +9,7 @@ interface ButtonContainerProps {
 export const BottomBar = styled.div<ButtonContainerProps>`
   width: ${(props) => (props.active_link === 'ACTIVE' ? 100 : 0)}%;
   height: 4px;
-  background: ${(props) => props.theme.darkness};
+  background: ${(props) => props.theme.primary};
   transition: 0.3s ease;
 `;
 
@@ -18,12 +18,12 @@ export const ButtonContainer = styled.div<ButtonContainerProps>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.375rem;
 
   a {
     color: ${(props) =>
       props.active_link === 'ACTIVE'
-        ? props.theme.darkness
+        ? props.theme.primary
         : props.theme.lightness};
     line-height: 1;
     font-size: 2.5rem;
@@ -35,7 +35,7 @@ export const ButtonContainer = styled.div<ButtonContainerProps>`
   }
 
   &:hover a {
-    color: ${(props) => props.theme.darkness};
+    color: ${(props) => props.theme.primary};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.fk}) {

@@ -8,7 +8,7 @@ export const AppBarContainer = styled.div`
   height: 150px;
   width: 100vw;
   padding: 0 16vw;
-  background: ${(props) => props.theme.primary}80;
+  background: ${(props) => props.theme.darkOne};
   backdrop-filter: blur(5px);
   z-index: 1;
 
@@ -33,6 +33,9 @@ export const MainMenu = styled.nav`
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    gap: 3.5rem;
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     gap: 3rem;
   }
