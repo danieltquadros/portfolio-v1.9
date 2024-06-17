@@ -36,15 +36,15 @@ export const MiniAppBar = styled.div<MiniMenuContainerProps>`
   align-items: center;
   height: 90px;
   width: calc(100vw - 300px);
-  background: #886c2c;
+  background: ${(props) => props.theme.primaryDark};
   padding-left: 4vw;
   position: relative;
   right: ${(props) => (props.opened ? 'calc(100vw - 300px)' : '0')};
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    bottom: 0;
     right: 0;
     width: ${(props) => (props.opened ? '0' : 'calc(100vw - 300px)')};
     padding-left: ${(props) => (props.opened ? '0' : '4vw')};
+    bottom: ${(props) => (props.opened ? '-348px' : '0')};
   }
 `;
 
@@ -52,17 +52,20 @@ export const MiniMenuContainer = styled.div<MiniMenuContainerProps>`
   display: flex;
   justify-content: space-between;
   padding-right: 4vw;
-  background: #886c2c;
+  background: ${(props) => props.theme.primaryDark};
+  transition:
+    height 0.5s ease,
+    max-height 0.5s ease;
   width: 300px;
   height: ${(props) => (props.opened ? '100vh' : '100%')};
   overflow: hidden;
   padding-top: 10px;
   z-index: 1;
-  transition: max-height 0.5s ease;
   max-height: ${(props) => (props.opened ? '100vh' : '90px')};
   position: relative;
   right: ${(props) => (props.opened ? 'calc(100vw - 300px)' : '0')};
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    transition: width 0.5s ease;
     align-items: flex-end;
     width: ${(props) => (props.opened ? '100vw' : '300px')};
     height: 100%;
@@ -82,13 +85,37 @@ export const MenuIcon = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
     padding-bottom: 18px;
+    position: relative;
+    bottom: 0;
+    right: 0;
   }
 `;
 
-export const MenuBar = styled.div`
+export const MenuBar = styled.div<MiniMenuContainerProps>`
   width: 50px;
   height: 6px;
   background: ${(props) => props.theme.darkness};
+  transition: 0.6s ease;
+
+  rotate: ${(props) => (props.opened ? '0' : '360deg')};
+
+  &.barOne {
+    width: 40px;
+    rotate: 45deg;
+    position: relative;
+    top: 14px;
+  }
+
+  &.barTwo {
+    width: 0;
+  }
+
+  &.barThree {
+    width: 40px;
+    rotate: -45deg;
+    position: relative;
+    bottom: 14px;
+  }
 `;
 
 export const NavContainer = styled.div`
@@ -98,18 +125,3 @@ export const NavContainer = styled.div`
   padding: 20px 40px 40px 40px;
   min-height: 80px;
 `;
-
-// @media (max-width: ${({ theme }) => theme.breakpoints.fk}) {
-//   padding: 0 12vw;
-//   height: 120px;
-// }
-// @media (max-width: ${({ theme }) => theme.breakpoints.tk}) {
-//   padding: 0 10vw;
-// }
-// @media (max-width: ${({ theme }) => theme.breakpoints.hd}) {
-//   padding: 0 8vw;
-//   height: 90px;
-// }
-// @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-//   padding: 0 0 0 4vw;
-// }

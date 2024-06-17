@@ -38,7 +38,10 @@ const AppBarMini = ({ linkList, activeLink }: AppBarMiniProps) => {
         <MiniAppBar opened={openMenu}>
           <LogoTemp />
         </MiniAppBar>
-        <MiniMenuContainer opened={openMenu}>
+        <MiniMenuContainer
+          opened={openMenu}
+          className={openMenu ? 'opened' : ''}
+        >
           <NavContainer>
             {openMenu &&
               linkList.map((lk: LinkType, index: number) => {
@@ -55,9 +58,9 @@ const AppBarMini = ({ linkList, activeLink }: AppBarMiniProps) => {
               })}
           </NavContainer>
           <MenuIcon onClick={handleOpenMenu}>
-            <MenuBar />
-            <MenuBar />
-            <MenuBar />
+            <MenuBar opened={openMenu} className={openMenu ? 'barOne' : ''} />
+            <MenuBar opened={openMenu} className={openMenu ? 'barTwo' : ''} />
+            <MenuBar opened={openMenu} className={openMenu ? 'barThree' : ''} />
           </MenuIcon>
         </MiniMenuContainer>
         {/* {isSm.only && openMenu && (
