@@ -6,8 +6,6 @@ import useBreakpoints from '@/hooks/useBreakpoints';
 
 // Local components
 import AppBarDefault from './components/AppBarDefault';
-
-// Styles
 import { ActiveLink } from './components/AppBarButton/styles';
 import AppBarMini from './components/AppBarMini';
 
@@ -16,7 +14,7 @@ export interface LinkType {
   link: string;
 }
 
-const linkList: LinkType[] = [
+export const linkList: LinkType[] = [
   {
     label: 'Início',
     link: '/#welcome',

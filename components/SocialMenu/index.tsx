@@ -1,3 +1,4 @@
+// Styles
 import { SocialMenuContainer, SocialMenuPanel } from './styles';
 
 const SocialMenu = () => {

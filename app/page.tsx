@@ -1,9 +1,10 @@
 'use client';
 
+// Themes and Theme provider
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '@/styles/themes/default';
 
-import styles from './page.module.css';
+// Global components
 import AppBar from '@/components/AppBar';
 import WelcomePage from '@/components/WelcomePage';
 import About from '@/components/About';
@@ -13,6 +14,8 @@ import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 // import SocialMenu from '@/components/SocialMenu';
 // import NavigationMenu from '@/components/NavigationMenu';
+
+import styles from './page.module.css';
 
 export default function Home() {
   return (

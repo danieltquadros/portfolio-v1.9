@@ -1,9 +1,20 @@
+// React and Next
 import { useState } from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
-import useBreakpoints from '@/hooks/useBreakpoints';
+// Logo
+import logo from '@/public/logo.png';
 
+// Types and interfaces
 import { LinkType } from '../..';
 
+// Local components
+import AppBarButton from '../AppBarButton';
+import { ActiveLink } from '../AppBarButton/styles';
+import { LogoContainer } from '../AppBarDefault/styles';
+
+// Styles
 import {
   AppBarMiniContainer,
   Container,
@@ -13,13 +24,6 @@ import {
   MiniMenuContainer,
   NavContainer,
 } from './styles';
-import AppBarButton from '../AppBarButton';
-import { ActiveLink } from '../AppBarButton/styles';
-import { LogoContainer } from '../AppBarDefault/styles';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-
-import logo from '@/public/logo.png';
 
 interface AppBarMiniProps {
   linkList: LinkType[];

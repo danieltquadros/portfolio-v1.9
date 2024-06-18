@@ -1,8 +1,11 @@
+// React
 import React from 'react';
-import { ServicesContainer } from './styles';
+
+// Global components
+import PageContainer from '../PageContainer';
 
 const Services = () => {
-  return <ServicesContainer id="services">Services</ServicesContainer>;
+  return <PageContainer id="services">Services</PageContainer>;
 };
 
 export default Services;

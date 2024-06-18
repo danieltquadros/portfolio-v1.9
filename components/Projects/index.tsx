@@ -1,8 +1,11 @@
+// React
 import React from 'react';
-import { ProjectsContainer } from './styles';
+
+// Global components
+import PageContainer from '../PageContainer';
 
 const Projects = () => {
-  return <ProjectsContainer id="projects">Projects</ProjectsContainer>;
+  return <PageContainer id="projects">Projects</PageContainer>;
 };
 
 export default Projects;

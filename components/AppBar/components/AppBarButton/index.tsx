@@ -1,5 +1,7 @@
-import { ReactNode, useEffect } from 'react';
+// React
+import { ReactNode } from 'react';
 
+// Styles
 import { BottomBar, ButtonContainer, ActiveLink } from './styles';
 
 interface AppBarButtonProps {

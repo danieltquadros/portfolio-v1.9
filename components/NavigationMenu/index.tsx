@@ -1,3 +1,4 @@
+// Styles
 import { NavigationMenuContainer, NavigationMenuPanel } from './styles';
 
 const NavigationMenu = () => {

@@ -1,8 +1,11 @@
+// React
 import React from 'react';
-import { SkillsContainer } from './styles';
+
+// Global components
+import PageContainer from '../PageContainer';
 
 const Skills = () => {
-  return <SkillsContainer id="skills">Skills</SkillsContainer>;
+  return <PageContainer id="skills">Skills</PageContainer>;
 };
 
 export default Skills;

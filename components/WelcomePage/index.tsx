@@ -1,8 +1,11 @@
+// React
 import React from 'react';
-import { WelcomePageContainer } from './styles';
+
+// Global components
+import PageContainer from '../PageContainer';
 
 const WelcomePage = () => {
-  return <WelcomePageContainer id="welcome">WelcomePage</WelcomePageContainer>;
+  return <PageContainer id="welcome">WelcomePage</PageContainer>;
 };
 
 export default WelcomePage;

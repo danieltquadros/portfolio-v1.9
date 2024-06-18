@@ -1,8 +1,10 @@
 import React from 'react';
-import { ContactContainer } from './styles';
+
+// Global components
+import PageContainer from '../PageContainer';
 
 const Contact = () => {
-  return <ContactContainer id="contact">Contact</ContactContainer>;
+  return <PageContainer id="contact">Contact</PageContainer>;
 };
 
 export default Contact;
