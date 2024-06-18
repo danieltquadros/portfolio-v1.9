@@ -8,11 +8,13 @@ import PageContainer from '../PageContainer';
 import {
   AboutContainer,
   BackPanel,
+  ImageAndBack,
   ImagePanel,
   LearnMoreButton,
   LeftPanel,
   RightPanel,
 } from './styles';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -31,10 +33,12 @@ const About = () => {
           </LearnMoreButton>
         </LeftPanel>
         <RightPanel>
-          <BackPanel />
-          <ImagePanel>
-            <img src="perfil.png" />
-          </ImagePanel>
+          <ImageAndBack>
+            <BackPanel />
+            <ImagePanel>
+              <Image src="/perfil.png" height={100} width={100} alt="" />
+            </ImagePanel>
+          </ImageAndBack>
         </RightPanel>
       </AboutContainer>
     </PageContainer>

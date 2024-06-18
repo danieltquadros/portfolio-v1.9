@@ -5,6 +5,10 @@ export const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const LeftPanel = styled.div`
@@ -28,6 +32,15 @@ export const LeftPanel = styled.div`
     color: ${(props) => props.theme.darkOne};
     max-width: 500px;
     font-family: 'Inter', sans-serif;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+
+    & p {
+      max-width: 700px;
+    }
   }
 `;
 
@@ -58,30 +71,83 @@ export const RightPanel = styled.div`
   height: 80vh;
   border-radius: 4px;
   background: ${(props) => props.theme.primary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    width: 100%;
+    height: 12vh;
+    border-radius: 4px 4px 0 0;
+  }
 `;
 
-export const BackPanel = styled.div`
-  width: 460px;
-  height: 460px;
+export const ImageAndBack = styled.div`
   position: relative;
   top: 160px;
   right: 120px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    top: 20px;
+    right: 200px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    top: 80px;
+    right: -200px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    right: -100px;
+  }
+`;
+
+export const BackPanel = styled.div`
+  width: 24vw;
+  height: 24vw;
   background-image: url('backImage.svg');
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    width: 36vw;
+    height: 36vw;
+  }
 `;
 
 export const ImagePanel = styled.div`
-  width: 460px;
-  height: 460px;
+  width: 24vw;
+  height: 24vw;
   background: ${(props) => props.theme.darkTwo};
   position: relative;
-  bottom: 360px;
-  right: 40px;
+  top: -27vw;
+  right: -3vw;
 
   & img {
-    width: 100%;
-    height: 100%;
-    box-shadow: -10px 10px 25px 15px ${(props) => props.theme.darkness};
+    width: 24vw;
+    height: 24vw;
+    box-shadow: -10px 10px 20px 10px ${(props) => props.theme.darkness};
     object-fit: cover;
-    filter: sepia(80%);
+    filter: grayscale(100%);
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 30vw;
+    height: 30vw;
+    top: -33vw;
+    & img {
+      width: 30vw;
+      height: 30vw;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    width: 36vw;
+    height: 36vw;
+    top: -40vw;
+    & img {
+      width: 36vw;
+      height: 36vw;
+    }
   }
 `;
