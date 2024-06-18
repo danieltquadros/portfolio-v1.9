@@ -41,10 +41,10 @@ export const MainMenu = styled.nav`
   }
 `;
 
-export const LogoTemp = styled.div`
+export const LogoContainer = styled.div`
   width: 80px;
   height: 80px;
-  background: #ccc;
+  cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.hd}) {
     width: 50px;

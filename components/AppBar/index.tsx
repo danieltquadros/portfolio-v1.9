@@ -5,13 +5,7 @@ import { useEffect, useState } from 'react';
 import useBreakpoints from '@/hooks/useBreakpoints';
 
 // Local components
-import MiniMenu from './components/AppBarMini';
 import AppBarDefault from './components/AppBarDefault';
-import {
-  AppBarContainer,
-  LogoTemp,
-  MainMenu,
-} from './components/AppBarDefault/styles';
 
 // Styles
 import { ActiveLink } from './components/AppBarButton/styles';

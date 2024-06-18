@@ -15,7 +15,11 @@ import {
 } from './styles';
 import AppBarButton from '../AppBarButton';
 import { ActiveLink } from '../AppBarButton/styles';
-import { LogoTemp } from '../AppBarDefault/styles';
+import { LogoContainer } from '../AppBarDefault/styles';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+
+import logo from '@/public/logo.png';
 
 interface AppBarMiniProps {
   linkList: LinkType[];
@@ -23,7 +27,7 @@ interface AppBarMiniProps {
 }
 
 const AppBarMini = ({ linkList, activeLink }: AppBarMiniProps) => {
-  const { isSm } = useBreakpoints();
+  const router = useRouter();
 
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -36,7 +40,9 @@ const AppBarMini = ({ linkList, activeLink }: AppBarMiniProps) => {
       <Container opened={openMenu} onClick={handleOpenMenu} />
       <div style={{ display: 'flex' }}>
         <MiniAppBar opened={openMenu}>
-          <LogoTemp />
+          <LogoContainer onClick={() => router.push('/#welcome')}>
+            <Image src={logo} height={50} alt="" />
+          </LogoContainer>
         </MiniAppBar>
         <MiniMenuContainer
           opened={openMenu}
