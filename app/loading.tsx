@@ -9,7 +9,7 @@ const Loading = () => {
         width: '100vw',
       }}
     >
-      <h1>Loading</h1>
+      <h1 style={{ color: '#F00' }}>Loading</h1>
     </div>
   );
 };
