@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "fix": "eslint --fix .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@mdi/js": "^7.4.47",
@@ -38,6 +40,7 @@
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "globals": "^15.4.0",
+    "husky": "^9.0.11",
     "prettier": "^3.3.2",
     "typescript": "^5",
     "typescript-eslint": "^7.13.0"
