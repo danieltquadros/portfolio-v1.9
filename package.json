@@ -9,7 +9,6 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "fix": "eslint --fix .",
     "prepare": "husky"
   },
   "dependencies": {

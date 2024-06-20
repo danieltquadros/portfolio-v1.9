@@ -3,8 +3,8 @@ import { Inter, Oswald } from 'next/font/google';
 
 import './globals.css';
 
-export const inter = Inter({ subsets: ['latin'], display: 'swap' });
-export const oswald = Oswald({ subsets: ['latin'], display: 'swap' });
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
+const oswald = Oswald({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={`${inter.className} ${oswald.className}`}>
