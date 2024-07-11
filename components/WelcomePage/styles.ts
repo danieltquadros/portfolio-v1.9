@@ -104,6 +104,18 @@ export const TitleContainer = styled.h1`
 `;
 
 export const RightPanel = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 4vw;
+  gap: 2rem;
   height: 100%;
-  width: 100%;
+  width: 500px;
+`;
+
+export const CardArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 `;
