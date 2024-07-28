@@ -4,13 +4,8 @@ export const AppBarMiniContainer = styled.div`
   display: flex;
   flex-direction: row;
   position: fixed;
-  z-index: 2;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    bottom: 0;
-    align-items: flex-end;
-    flex-direction: column;
-  }
+  z-index: 10;
+  box-shadow: 0px 2px 4px -1px ${(props) => props.theme.primary}90;
 `;
 
 interface MiniMenuContainerProps {
@@ -20,15 +15,11 @@ interface MiniMenuContainerProps {
 export const Container = styled.div<MiniMenuContainerProps>`
   display: flex;
   background: transparent;
-  z-index: 3;
+  z-index: 10;
   height: ${(props) => (props.opened ? '100vh' : '0')};
   width: ${(props) => (props.opened ? 'calc(100vw - 300px)' : '0')};
   position: relative;
   left: 0px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    width: ${(props) => (props.opened ? '100vw' : '0')};
-    left: 0;
-  }
 `;
 
 export const MiniAppBar = styled.div<MiniMenuContainerProps>`
@@ -36,23 +27,27 @@ export const MiniAppBar = styled.div<MiniMenuContainerProps>`
   align-items: center;
   height: 90px;
   width: calc(100vw - 300px);
-  background: ${(props) => props.theme.darkOne};
-  padding-left: 4vw;
+  background: ${(props) => props.theme.darkness};
+  padding-left: 48px;
   position: relative;
   right: ${(props) => (props.opened ? 'calc(100vw - 300px)' : '0')};
+  box-shadow: ${(props) =>
+    props.opened ? `0px 2px 4px -1px ${props.theme.primary}90` : 'none'};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding-left: 32px;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    right: 0;
-    width: ${(props) => (props.opened ? '0' : 'calc(100vw - 300px)')};
-    padding-left: ${(props) => (props.opened ? '0' : '4vw')};
-    bottom: ${(props) => (props.opened ? '-348px' : '0')};
+    padding-left: 16px;
   }
 `;
 
 export const MiniMenuContainer = styled.div<MiniMenuContainerProps>`
   display: flex;
   justify-content: space-between;
-  padding-right: 4vw;
-  background: ${(props) => props.theme.darkOne};
+  padding-right: 48px;
+  background: ${(props) => props.theme.darkness};
   transition:
     height 0.5s ease,
     max-height 0.5s ease;
@@ -60,16 +55,18 @@ export const MiniMenuContainer = styled.div<MiniMenuContainerProps>`
   height: ${(props) => (props.opened ? '100vh' : '100%')};
   overflow: hidden;
   padding-top: 10px;
-  z-index: 1;
+  z-index: 10;
   max-height: ${(props) => (props.opened ? '100vh' : '90px')};
   position: relative;
   right: ${(props) => (props.opened ? 'calc(100vw - 300px)' : '0')};
+  box-shadow: ${(props) =>
+    props.opened ? `0px 2px 4px -1px ${props.theme.primary}90` : 'none'};
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding-right: 32px;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    transition: width 0.5s ease;
-    align-items: flex-end;
-    width: ${(props) => (props.opened ? '100vw' : '300px')};
-    height: 100%;
-    right: 0;
+    padding-right: 16px;
   }
 `;
 
@@ -82,13 +79,6 @@ export const MenuIcon = styled.div`
   width: 70px;
   height: 70px;
   cursor: pointer;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    padding-bottom: 18px;
-    position: relative;
-    bottom: 0;
-    right: 0;
-  }
 `;
 
 export const MenuBar = styled.div<MiniMenuContainerProps>`

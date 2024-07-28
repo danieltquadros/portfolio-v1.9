@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -16,27 +19,54 @@ body {
   background: #191c20;
 }
 
-a,
-p {
+p,
+button {
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #fff;
 }
-
-span {
+a {
+  font-family: 'Oswald', sans-serif;
   text-decoration: none;
   font-size: 1.25rem;
   color: #fff;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+span {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+}
+
+@media (max-width: 1920px) {
+  p,
+  button {
+    font-size: 1.125rem;
+  }
+}
+
 @media (max-width: 1366px) {
-  a {
-    font-size: 1.25rem;
+  h2 {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  a {
+  p,
+  button {
     font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
   }
 }

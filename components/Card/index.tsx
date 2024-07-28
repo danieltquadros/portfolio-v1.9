@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CardContainer } from './styled';
+import { CardContainer, DescriptionContainer, TitleContainer } from './styled';
 
 export interface CardContent {
   id: string;
@@ -19,11 +19,13 @@ const Card = ({ cardContent }: CardProps) => {
   };
 
   return (
-    <CardContainer onClick={handleOpenDescription}>
-      <h2>{cardContent.title}</h2>
-      <div>
+    <CardContainer>
+      <TitleContainer>
+        <h2>{cardContent.title}</h2>
+      </TitleContainer>
+      <DescriptionContainer>
         <p>{cardContent.description}</p>
-      </div>
+      </DescriptionContainer>
     </CardContainer>
   );
 };

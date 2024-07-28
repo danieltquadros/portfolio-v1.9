@@ -8,23 +8,30 @@ export const AppBarContainer = styled.div`
   height: 150px;
   width: 100vw;
   padding: 0 16vw;
-  background: ${(props) => props.theme.darkOne};
-  backdrop-filter: blur(5px);
-  z-index: 1;
+  background: ${(props) => props.theme.darkness};
+  z-index: 10;
+  box-shadow: 0px 2px 4px -1px ${(props) => props.theme.primary}90;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.fk}) {
-    padding: 0 12vw;
+    padding: 0 8vw;
     height: 120px;
   }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tk}) {
-    padding: 0 10vw;
+    padding: 0 128px;
   }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.hd}) {
-    padding: 0 8vw;
+    padding: 0 96px;
     height: 90px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding: 0 0 0 4vw;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    padding: 0 64px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    padding: 0 48px;
   }
 `;
 

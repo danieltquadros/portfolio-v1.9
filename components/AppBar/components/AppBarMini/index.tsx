@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 // Logo
-import logo from '@/public/logo.png';
+import logo from '@/public/logo-40x40.png';
 
 // Types and interfaces
 import { LinkType } from '../..';

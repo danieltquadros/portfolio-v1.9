@@ -16,16 +16,12 @@ export interface LinkType {
 
 export const linkList: LinkType[] = [
   {
-    label: 'Início',
+    label: 'Home',
     link: '/#welcome',
   },
   {
     label: 'Serviços',
     link: '/#services',
-  },
-  {
-    label: 'Habilidades',
-    link: '/#skills',
   },
   {
     label: 'Projetos',

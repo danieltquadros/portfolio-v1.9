@@ -5,51 +5,41 @@ import React from 'react';
 import PageContainer from '../PageContainer';
 import {
   CardArea,
+  CardAreaTitle,
+  DescriptionContainer,
   LeftPanel,
   RightPanel,
   TitleContainer,
   WelcomePageContainer,
 } from './styles';
 import Card, { CardContent } from '../Card';
-import ButtonLarge from '../ButtonLarge';
+import Button from '../Button';
 
 const WelcomePage = () => {
   const cardContent: CardContent[] = [
     {
       id: '1',
-      title: 'Sites Institucionais?',
+      title: 'Desenvolvimento e Design?',
       description:
-        'Sites informativos que apresentam uma empresa, organização ou indivíduo. Funcionalidades: Páginas sobre a empresa, serviços, equipe, contato, blog.',
+        'Desenvolvimento de Sites Institucionais, E-commerce, Landing Page Design e Desenvolvimento Responsivo',
     },
     {
       id: '2',
-      title: 'Aplicações Web?',
+      title: 'Otimização e Manutenção?',
       description:
-        'Software acessível via navegador que pode ter diversas funcionalidades complexas. Funcionalidades: Gerenciamento de usuários, painéis administrativos, integrações com APIs externas, e-commerce, etc.',
+        'Otimização de Sites para Motores de Busca (SEO) Manutenção e Suporte de Sites',
     },
     {
       id: '3',
-      title: 'Plataformas de E-commerce?',
-      // description: 'Sites voltados para a venda de produtos',
+      title: 'Integração e Consultoria?',
       description:
-        'Sites voltados para a venda de produtos e serviços online. Funcionalidades: Carrinho de compras, pagamento online, gestão de inventário, perfil de usuário, histórico de pedidos.',
+        'Integração com APIs e Serviços Externos Consultoria em Usabilidade e Experiência do Usuário (UI/UX).',
     },
     {
       id: '4',
       title: 'O que mais você precisa na Web?',
       description:
-        'Blogs e Sistemas de Gerenciamento de Conteúdo (CMS), Sistemas de Gerenciamento de Relacionamento com o Cliente (CRM), Plataformas de Aprendizado Online (E-learning), Aplicações de Redes Sociais, Ferramentas de Colaboração e Gestão de Projetos, APIs e Microserviços, etc...',
-    },
-  ];
-
-  const buttonList = [
-    {
-      id: '1',
-      label: 'Sites Institucionais?',
-    },
-    {
-      id: '2',
-      label: 'Aplicações Web?',
+        'Tem alguma ideia ou necessidade específica? Vamos conversar e encontrar a melhor solução para você!',
     },
   ];
 
@@ -58,15 +48,27 @@ const WelcomePage = () => {
       <WelcomePageContainer>
         <LeftPanel>
           <TitleContainer>
-            <span className="myName">Elisiane Quadros</span>
-            <br />
-            <span className="myPosition">Desenvolvedora Web</span>
+            <h1 className="myName">Elisiane Quadros</h1>
+            <h1 className="myPosition">Web Developer_</h1>
           </TitleContainer>
+          <DescriptionContainer>
+            <p>
+              Impulsione o seu negócio, contando com soluções escaláveis e
+              personalizadas para potencializar a qualidade do seu sistema. 
+            </p>
+            <p>
+              Desenvolva os seus produtos digitais com alta qualidade de forma
+              rápida e inteligente.
+            </p>
+          </DescriptionContainer>
+          <Button>Entre em contato</Button>
         </LeftPanel>
         <RightPanel>
-          <h1>O que você precisa?</h1>
+          <CardAreaTitle>
+            <h1>O que você precisa?</h1>
+          </CardAreaTitle>
+
           <CardArea>
-            {/* <ButtonLarge /> */}
             {cardContent.map((content) => (
               <Card key={content.id} cardContent={content} />
             ))}
