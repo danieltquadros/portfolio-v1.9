@@ -64,6 +64,7 @@ const Services = () => {
       icon: <Icon path={mdiAccountWrenchOutline} size={2} />,
     },
   ];
+
   return (
     <PageContainer id="services">
       <ServiceContainer>
