@@ -13,6 +13,10 @@ export const WelcomePageContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     flex-direction: column;
     height: 100%;
+
+    @media (max-height: 644px) {
+      margin-top: 90px;
+    }
   }
 `;
 

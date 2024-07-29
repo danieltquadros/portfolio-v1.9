@@ -1,9 +1,19 @@
-import { ServiceCardContainer } from './styled';
+import { useRouter } from 'next/navigation';
+
+import {
+  HiddenContainer,
+  ServiceArea,
+  ServiceCardButton,
+  ServiceCardContainer,
+  ServiceTab,
+} from './styled';
+import { ReactNode } from 'react';
 
 export interface ServiceProps {
   id: string;
   title: string;
   description: string;
+  icon: ReactNode;
 }
 
 interface ServiceCardProps {
@@ -11,10 +21,23 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
+  const router = useRouter();
+
   return (
-    <ServiceCardContainer>
-      <h1>{service.title}</h1>
-    </ServiceCardContainer>
+    <>
+      <ServiceCardContainer>
+        <ServiceTab>{service.icon}</ServiceTab>
+        <ServiceArea>
+          <h2>{service.title}</h2>
+          <HiddenContainer>
+            <p>{service.description}</p>
+            <ServiceCardButton onClick={() => router.push('/#contact')}>
+              Mais informações
+            </ServiceCardButton>
+          </HiddenContainer>
+        </ServiceArea>
+      </ServiceCardContainer>
+    </>
   );
 };
 
