@@ -28,7 +28,7 @@ export default function Home() {
         <NavigationMenu /> */}
         <WelcomePage />
         <Services />
-        <Skills />
+        {/* <Skills /> */}
         <Projects />
         <About />
         <Contact />
