@@ -1,23 +1,11 @@
 import styled from 'styled-components';
 
-export const ProjectsContainer = styled.div`
+export const ProjectContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  min-height: calc(100vh - 90px);
+  gap: 1rem;
+  justify-content: center;
   align-items: center;
-  padding: 2rem;
-  width: 100%;
-  height: 300px;
-  border: 1px solid ${(props) => props.theme.lightness};
-  border-radius: 8px;
-  transition: height 0.5s ease;
-`;
-
-export const LeftPanel = styled.div`
-  max-width: 600px;
-`;
-
-export const RightPanel = styled.div`
-  width: 400px;
-  height: 250px;
-  border: 1px solid ${(props) => props.theme.lightness};
+  padding: 1rem 0;
 `;

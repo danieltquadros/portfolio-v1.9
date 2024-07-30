@@ -6,27 +6,57 @@ import PageContainer from '../PageContainer';
 
 //Style
 
-import { LeftPanel, ProjectsContainer, RightPanel } from './styles';
+import { ProjectContainer } from './styles';
+import ProjectCard, { ProjectProps } from './components/ProjectCard';
 
 const Projects = () => {
+  const projectList: ProjectProps[] = [
+    {
+      id: '1',
+      title: 'Project 01',
+      description:
+        ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, facere.',
+      projectUrl: '',
+      skillList: [
+        {
+          id: '1',
+          name: 'React',
+          icon: '',
+        },
+        {
+          id: '2',
+          name: 'Next',
+          icon: '',
+        },
+      ],
+    },
+    {
+      id: '2',
+      title: 'Project 02',
+      description:
+        ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, facere.',
+      projectUrl: '',
+      skillList: [
+        {
+          id: '1',
+          name: 'React',
+          icon: '',
+        },
+        {
+          id: '3',
+          name: 'Typescript',
+          icon: '',
+        },
+      ],
+    },
+  ];
   return (
     <PageContainer id="projects">
-      <ProjectsContainer>
-        <LeftPanel>
-          <h2>Projeto _01</h2>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              quae, tempore totam eligendi saepe alias porro reiciendis
-              voluptatum.
-            </p>
-          </div>
-          <div className="habilits"></div>
-        </LeftPanel>
-        <RightPanel>
-          <div></div>
-        </RightPanel>
-      </ProjectsContainer>
+      <ProjectContainer>
+        {projectList.map((project) => {
+          return <ProjectCard key={project.id} project={project} />;
+        })}
+      </ProjectContainer>
     </PageContainer>
   );
 };
