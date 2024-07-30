@@ -45,25 +45,19 @@ export const ServiceArea = styled.div`
   }
 `;
 
-export const ServiceCardButton = styled.button`
-  width: 100%;
-  max-width: 350px;
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: none;
-  color: transparent;
-  background: transparent;
-  transition:
-    color 0.3s ease,
-    background 0.3s ease;
-`;
-
 export const HiddenContainer = styled.div`
   display: contents;
 
   & p {
+    text-align: center;
     color: transparent;
     transition: 0.9s ease;
+  }
+
+  & button {
+    background: transparent;
+    color: transparent;
+    border-color: transparent;
   }
 `;
 
@@ -95,15 +89,15 @@ export const ServiceCardContainer = styled.div`
     }
   }
 
-  &:hover ${ServiceCardButton} {
-    color: #fff;
-    background: ${(props) => props.theme.darkOne};
-    cursor: pointer;
-  }
-
   &:hover ${HiddenContainer} {
     & p {
       color: #fff;
+    }
+
+    & button {
+      background: #272622;
+      color: ${(props) => props.theme.primary};
+      border-color: ${(props) => props.theme.primary};
     }
   }
 
