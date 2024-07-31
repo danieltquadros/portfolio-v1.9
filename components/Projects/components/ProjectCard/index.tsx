@@ -2,14 +2,16 @@ import { ReactNode, useEffect, useState } from 'react';
 import VideoPlayer from '../VideoPlayer';
 import {
   LeftPanel,
-  LinkArea,
-  ProjectsContainer,
+  CardContainer,
   SkillsArea,
   SkillsContainer,
+  RightPanel,
+  LinkArea,
 } from './styles';
 import Link from 'next/link';
 import { mdiLink, mdiLinkBox } from '@mdi/js';
 import Icon from '@mdi/react';
+import Image from 'next/image';
 
 interface SkillProps {
   id: string;
@@ -45,20 +47,19 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
   console.log(index);
 
   return (
-    <ProjectsContainer isPair={isPair}>
+    <CardContainer isPair={isPair}>
       <LeftPanel>
         <h2>{project.title}</h2>
         <div>
           <p>{project.description}</p>
           <LinkArea>
             <div>
-              <Icon path={mdiLinkBox} size={0.8} />
               <Link href="https://github.com/elisiane-quadros/postFeeds">
-                Ver Código
+                Ver Repositório
               </Link>
             </div>
+
             <div>
-              <Icon path={mdiLink} size={0.8} />
               <Link href="https://github.com/elisiane-quadros/postFeeds">
                 Ver Projeto
               </Link>
@@ -78,8 +79,11 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           })}
         </SkillsContainer>
       </LeftPanel>
-      <VideoPlayer projectUrl={project.projectUrl} />
-    </ProjectsContainer>
+      {/* <VideoPlayer projectUrl={project.projectUrl} /> */}
+      <RightPanel>
+        <Image src="/projectImg.jpg" height={268} width={500} alt="#" />
+      </RightPanel>
+    </CardContainer>
   );
 };
 

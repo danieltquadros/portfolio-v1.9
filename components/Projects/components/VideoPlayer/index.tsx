@@ -9,7 +9,7 @@ const VideoPlayer = ({ projectUrl }: VideoPlayerProps) => {
     <div>
       <iframe
         width="500"
-        height="250"
+        height="268"
         src={`https://www.youtube.com/embed/${projectUrl}`}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

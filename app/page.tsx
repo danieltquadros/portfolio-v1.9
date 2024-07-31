@@ -26,11 +26,11 @@ export default function Home() {
         <AppBar />
         {/* <SocialMenu />
         <NavigationMenu /> */}
-        <WelcomePage />
-        <Services />
+        {/* <WelcomePage />
+        <Services /> */}
         <Projects />
-        <About />
-        <Contact />
+        {/* <About />
+        <Contact /> */}
       </main>
     </ThemeProvider>
   );
