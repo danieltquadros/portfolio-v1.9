@@ -12,7 +12,7 @@ const WelcomePage = dynamic(() => import('@/components/WelcomePage'), {
   ssr: false,
 });
 const Services = dynamic(() => import('@/components/Services'), { ssr: false });
-// const Skills = dynamic(() => import('@/components/Skills'), { ssr: false });
+
 const Projects = dynamic(() => import('@/components/Projects'), { ssr: false });
 const About = dynamic(() => import('@/components/About'), { ssr: false });
 const Contact = dynamic(() => import('@/components/Contact'), { ssr: false });
@@ -28,7 +28,6 @@ export default function Home() {
         <NavigationMenu /> */}
         <WelcomePage />
         <Services />
-        {/* <Skills /> */}
         <Projects />
         <About />
         <Contact />

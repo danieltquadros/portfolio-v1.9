@@ -1,5 +1,7 @@
 // React
 import React from 'react';
+import Icon from '@mdi/react';
+import { mdiLanguageCss3, mdiLanguageTypescript, mdiReact } from '@mdi/js';
 
 // Global components
 import PageContainer from '../PageContainer';
@@ -16,17 +18,22 @@ const Projects = () => {
       title: 'Project 01',
       description:
         ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, facere.',
-      projectUrl: '',
+      projectUrl: 'jYoYwDnin7k',
       skillList: [
         {
           id: '1',
           name: 'React',
-          icon: '',
+          icon: mdiReact,
         },
         {
           id: '2',
-          name: 'Next',
-          icon: '',
+          name: 'TypeScript',
+          icon: mdiLanguageTypescript,
+        },
+        {
+          id: '3',
+          name: 'CSS',
+          icon: mdiLanguageCss3,
         },
       ],
     },
@@ -35,7 +42,26 @@ const Projects = () => {
       title: 'Project 02',
       description:
         ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, facere.',
-      projectUrl: '',
+      projectUrl: 'jYoYwDnin7k',
+      skillList: [
+        {
+          id: '1',
+          name: 'React',
+          icon: '',
+        },
+        {
+          id: '3',
+          name: 'Typescript',
+          icon: '',
+        },
+      ],
+    },
+    {
+      id: '3',
+      title: 'Project 03',
+      description:
+        ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, facere.',
+      projectUrl: 'jYoYwDnin7k',
       skillList: [
         {
           id: '1',
@@ -53,8 +79,10 @@ const Projects = () => {
   return (
     <PageContainer id="projects">
       <ProjectContainer>
-        {projectList.map((project) => {
-          return <ProjectCard key={project.id} project={project} />;
+        {projectList.map((project, index: number) => {
+          return (
+            <ProjectCard key={project.id} project={project} index={index} />
+          );
         })}
       </ProjectContainer>
     </PageContainer>
