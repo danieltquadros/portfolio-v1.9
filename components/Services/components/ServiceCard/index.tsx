@@ -1,13 +1,11 @@
-import { useRouter } from 'next/navigation';
-
 import {
   HiddenContainer,
   ServiceArea,
-  ServiceCardButton,
   ServiceCardContainer,
   ServiceTab,
 } from './styled';
 import { ReactNode } from 'react';
+import Button from '@/components/Button';
 
 export interface ServiceProps {
   id: string;
@@ -21,8 +19,6 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
-  const router = useRouter();
-
   return (
     <>
       <ServiceCardContainer>
@@ -31,9 +27,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
           <h2>{service.title}</h2>
           <HiddenContainer>
             <p>{service.description}</p>
-            <ServiceCardButton onClick={() => router.push('/#contact')}>
-              Mais informações
-            </ServiceCardButton>
+            <Button>Mais informações</Button>
           </HiddenContainer>
         </ServiceArea>
       </ServiceCardContainer>
