@@ -119,7 +119,7 @@ export const RightPanel = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 `;
 
 export const ImagePanel = styled.div`
@@ -133,7 +133,7 @@ export const ImagePanel = styled.div`
   & img {
     display: block;
     position: relative;
-    width: calc(100vw - 32px);
+    width: calc(100vw - 66px);
     height: auto;
   }
 `;
@@ -141,11 +141,12 @@ export const ImagePanel = styled.div`
 export const RightPanelMask = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-  width: calc(100vw - 32px);
+  width: calc(100vw - 64px);
   height: 100%;
 `;
 
