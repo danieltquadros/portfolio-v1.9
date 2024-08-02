@@ -7,11 +7,13 @@ import {
   SkillsContainer,
   RightPanel,
   LinkArea,
+  DescriptionProject,
 } from './styles';
 import Link from 'next/link';
-import { mdiLink, mdiLinkBox } from '@mdi/js';
 import Icon from '@mdi/react';
 import Image from 'next/image';
+import { BottomBar } from '@/components/AppBar/components/AppBarButton/styles';
+import ButtonLink from '../ButtonLink';
 
 interface SkillProps {
   id: string;
@@ -43,36 +45,19 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
     setIsPair(false);
   }, [index]);
 
-  console.log(project.title, isPair);
-  console.log(index);
-
   return (
     <CardContainer isPair={isPair}>
       <LeftPanel>
         <h2>{project.title}</h2>
-        <div>
+        <DescriptionProject>
           <p>{project.description}</p>
-          <LinkArea>
-            <div>
-              <Link href="https://github.com/elisiane-quadros/postFeeds">
-                Ver Repositório
-              </Link>
-            </div>
-
-            <div>
-              <Link href="https://github.com/elisiane-quadros/postFeeds">
-                Ver Projeto
-              </Link>
-            </div>
-          </LinkArea>
-        </div>
+          <ButtonLink />
+        </DescriptionProject>
         <SkillsContainer>
           {project.skillList.map((skill) => {
             return (
               <SkillsArea key={skill.id}>
-                {/* <div>{skill.icon}</div> */}
                 {skill.icon && <Icon path={skill.icon} size={0.8} />}
-
                 <span>{skill.name}</span>
               </SkillsArea>
             );

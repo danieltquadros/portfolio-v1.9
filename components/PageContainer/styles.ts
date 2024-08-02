@@ -6,9 +6,9 @@ export const PageContainerComponent = styled.section`
   min-height: 100vh;
   padding: 150px 16vw 0 16vw;
 
-  &.dark {
+  /* &.dark {
     background: ${(props) => props.theme.darkTwo};
-  }
+  } */
 
   &.darkness {
     background: ${(props) => props.theme.darkness};

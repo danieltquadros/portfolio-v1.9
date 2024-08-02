@@ -1,6 +1,5 @@
 // React
 import React from 'react';
-import Icon from '@mdi/react';
 import { mdiLanguageCss3, mdiLanguageTypescript, mdiReact } from '@mdi/js';
 
 // Global components
@@ -47,12 +46,17 @@ const Projects = () => {
         {
           id: '1',
           name: 'React',
-          icon: '',
+          icon: mdiReact,
+        },
+        {
+          id: '2',
+          name: 'TypeScript',
+          icon: mdiLanguageTypescript,
         },
         {
           id: '3',
-          name: 'Typescript',
-          icon: '',
+          name: 'CSS',
+          icon: mdiLanguageCss3,
         },
       ],
     },
@@ -66,12 +70,17 @@ const Projects = () => {
         {
           id: '1',
           name: 'React',
-          icon: '',
+          icon: mdiReact,
+        },
+        {
+          id: '2',
+          name: 'TypeScript',
+          icon: mdiLanguageTypescript,
         },
         {
           id: '3',
-          name: 'Typescript',
-          icon: '',
+          name: 'CSS',
+          icon: mdiLanguageCss3,
         },
       ],
     },
