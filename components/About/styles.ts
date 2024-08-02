@@ -2,60 +2,76 @@ import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
-  gap: 1rem;
+  gap: 4rem;
   width: 100%;
   min-height: calc(100vh - 90px);
   padding: 1rem 0;
 
-  border-right: 1px solid ${(props) => props.theme.primary};
-  border-bottom: 1px solid ${(props) => props.theme.primary};
-  border-radius: 8px;
-
-  /* @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     flex-direction: column-reverse;
-  } */
-  //
+  }
 `;
 
 export const LeftPanel = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  position: relative;
+  flex: 2;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex: 1;
+    justify-content: center;
+  }
 `;
 
 export const BackCard = styled.div`
-  display: none;
-  width: calc(100vw - 2rem);
-  margin: 0 1rem;
-  max-width: 600px;
+  position: absolute;
+  top: -64px;
+  /* right: 64px; */
+  display: flex;
+  justify-content: stretch;
+  z-index: 1;
+  /* margin: 0 1rem; */
+  /* width: 40vw; */
+  width: 100%;
+  min-width: 400px;
+  /* max-width: 600px; */
   height: 300px;
   border: 1px solid ${(props) => props.theme.primary};
   border-radius: 8px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 0;
+    display: none;
+  }
 `;
 
 export const AboutCard = styled.div`
+  position: absolute;
+  left: 64px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 2;
   gap: 2rem;
-  width: calc(100vw - 2rem);
-  margin: 0 1rem;
-  max-width: 600px;
-  /* background-image: linear-gradient(
-    to right bottom,
-    #242a33,
-    #1f2b2e,
-    #202a28,
-    #242823,
-    #272622
-  ); */
-  /* border-right: 1px solid ${(props) => props.theme.primary};
-  border-bottom: 1px solid ${(props) => props.theme.primary};
-  border-radius: 8px; */
+  width: 100%;
+  min-width: 400px;
   padding: 1rem;
+  background: ${(props) => props.theme.darkTwo};
+  border-radius: 8px;
+
+  & button {
+    max-width: 100%;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    width: calc(100vw - 2rem);
+  }
 `;
 
 export const InformationContainer = styled.div`
@@ -117,9 +133,22 @@ export const InformationContainer = styled.div`
 export const RightPanel = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+  flex: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    justify-content: center;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    flex-direction: row;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    flex-direction: column;
+  }
 `;
 
 export const ImagePanel = styled.div`
@@ -134,6 +163,7 @@ export const ImagePanel = styled.div`
     display: block;
     position: relative;
     width: calc(100vw - 66px);
+    max-width: 400px;
     height: auto;
   }
 `;
@@ -147,6 +177,7 @@ export const RightPanelMask = styled.div`
   left: 0;
   z-index: 2;
   width: calc(100vw - 64px);
+  max-width: 400px;
   height: 100%;
 `;
 
@@ -202,8 +233,23 @@ export const Strip = styled.div`
 export const SocialMediaContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  align-self: center;
   gap: 1rem;
   width: 100%;
+  max-width: 400px;
+  height: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    flex-direction: column;
+    align-self: flex-end;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    flex-direction: row;
+    align-self: center;
+    width: calc(100vw - 64px);
+  }
 `;
 
 export const SocialMediaCard = styled.div`

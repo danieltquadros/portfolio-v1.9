@@ -5,12 +5,7 @@ export const ServiceTab = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-color: ${(props) => props.theme.darkTwo};
-  background-image: linear-gradient(
-    132deg,
-    ${(props) => props.theme.darkTwo} 0%,
-    ${(props) => props.theme.primary} 100%
-  );
+  background: ${(props) => props.theme.primary};
   width: 80px;
   height: 80px;
   border-radius: 7px 0 7px 0;
@@ -74,6 +69,12 @@ export const ServiceCardContainer = styled.div`
     border-radius: 7px;
     justify-content: flex-start;
     align-items: flex-start;
+    background: transparent;
+    background-image: linear-gradient(
+      132deg,
+      ${(props) => props.theme.darkTwo} 0%,
+      ${(props) => props.theme.primary}20 100%
+    );
 
     & path {
       color: #fff;
