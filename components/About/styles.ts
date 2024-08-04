@@ -264,13 +264,25 @@ export const SocialMediaCard = styled.div`
   align-items: center;
   background: ${(props) => props.theme.darkTwo};
   border-radius: 50%;
+  box-shadow: 0px 1px 4px ${(props) => props.theme.lightness};
   width: 64px;
   height: 64px;
+  transition: 0.3s ease;
 
   & a {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+  }
+
+  &:hover {
+    border: 1px solid ${(props) => props.theme.primary};
+    box-shadow: 0px 2px 8px -1px ${(props) => props.theme.primary};
+    background: ${(props) => props.theme.primary}10;
+
+    & path {
+      color: ${(props) => props.theme.primary};
+    }
   }
 `;
