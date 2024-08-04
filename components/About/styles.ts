@@ -18,34 +18,33 @@ export const AboutContainer = styled.div`
 
 export const LeftPanel = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
   flex: 2;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     flex: 1;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 `;
 
 export const BackCard = styled.div`
   position: absolute;
-  top: -64px;
-  /* right: 64px; */
+  top: -208px;
   display: flex;
   justify-content: stretch;
   z-index: 1;
-  /* margin: 0 1rem; */
-  /* width: 40vw; */
   width: 100%;
-  min-width: 400px;
-  /* max-width: 600px; */
+  max-width: 1024px;
   height: 300px;
   border: 1px solid ${(props) => props.theme.primary};
   border-radius: 8px;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 0;
+    top: 0;
     display: none;
   }
 `;
@@ -53,15 +52,14 @@ export const BackCard = styled.div`
 export const AboutCard = styled.div`
   position: absolute;
   left: 64px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 2;
   gap: 2rem;
   width: 100%;
-  min-width: 400px;
-  padding: 1rem;
+  max-width: 1024px;
+  padding: 2rem;
   background: ${(props) => props.theme.darkTwo};
   border-radius: 8px;
 
@@ -69,8 +67,14 @@ export const AboutCard = styled.div`
     max-width: 100%;
   }
 
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    padding: 1rem;
+  }
+
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: calc(100vw - 2rem);
+    position: relative;
+    left: 0;
   }
 `;
 
@@ -137,6 +141,7 @@ export const RightPanel = styled.div`
   align-items: center;
   gap: 2rem;
   flex: 1;
+  margin-left: 4rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
     justify-content: center;
@@ -144,6 +149,7 @@ export const RightPanel = styled.div`
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     flex-direction: row;
+    margin-left: 0;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
