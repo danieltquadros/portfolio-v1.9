@@ -25,7 +25,7 @@ const PageContainer = ({ children, id }: PageContainerProps) => {
       if (pagePosition % 2 === 0) {
         setBackgroundColor('darkness');
       } else {
-        setBackgroundColor('dark');
+        setBackgroundColor('darkness');
       }
     }
   };
