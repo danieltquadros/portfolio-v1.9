@@ -45,6 +45,13 @@ export const LeftPanel = styled.div`
     gap: 1rem;
   }
 `;
+
+export const ButtonLinkContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+`;
+
 export const DescriptionProject = styled.div`
   display: flex;
   flex-direction: column;

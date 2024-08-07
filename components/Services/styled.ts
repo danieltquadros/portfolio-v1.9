@@ -10,7 +10,11 @@ export const ServiceContainer = styled.div`
   min-height: calc(100vh - 90px);
   padding: 1rem 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  & h2 {
+    text-align: center;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
     grid-template-columns: repeat(2, 1fr);
   }
 

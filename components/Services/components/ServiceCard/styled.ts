@@ -2,112 +2,101 @@ import styled from 'styled-components';
 
 export const ServiceTab = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   padding: 1rem;
   background: ${(props) => props.theme.primary};
   width: 80px;
   height: 80px;
   border-radius: 7px 0 7px 0;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  transition: 0.5s ease;
 
   & path {
-    transition: 0.3s ease;
+    transition: 0.5s ease;
     color: ${(props) => props.theme.darkTwo};
   }
 `;
 
-export const ServiceArea = styled.div`
+export const ActionArea = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  gap: 1rem;
+  position: absolute;
   height: 100%;
   padding: 1rem;
-
-  position: relative;
-  top: -80px;
-  z-index: 2;
-  transition: 0.3s ease;
+  transition: 10s ease;
 
   & h2 {
-    transition: 0.3s ease;
-    position: relative;
-    top: 96px;
-    max-width: 260px;
-    text-align: center;
+    transition: 0.5s ease;
   }
-`;
-
-export const HiddenContainer = styled.div`
-  display: contents;
 
   & p {
     text-align: center;
-    color: transparent;
-    transition: 0.9s ease;
-  }
-
-  & button {
-    background: transparent;
-    color: transparent;
-    border-color: transparent;
+    transition: 0.5s ease;
   }
 `;
 
 export const ServiceCardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   border: 1px solid ${(props) => props.theme.lightness};
   border-radius: 8px;
   width: 100%;
   height: 250px;
   max-width: 500px;
+  transition: 0.5s ease;
+
+  &:hover {
+    border: 1px solid ${(props) => props.theme.primary};
+    box-shadow: 0px 2px 8px -1px ${(props) => props.theme.primary};
+    background: ${(props) => props.theme.primary}10;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    max-width: 100%;
+  }
 
   &:hover ${ServiceTab} {
     width: 100%;
     height: 248px;
     border-radius: 7px;
-    justify-content: flex-start;
-    align-items: flex-start;
     background: transparent;
     background-image: linear-gradient(
       132deg,
       ${(props) => props.theme.darkTwo} 0%,
       ${(props) => props.theme.primary}20 100%
     );
+  }
 
+  &:hover ${IconContainer} {
     & path {
-      color: #fff;
-    }
-  }
-
-  &:hover ${ServiceArea} {
-    top: -250px;
-
-    & h2 {
-      color: #fff;
-      top: 0;
-    }
-  }
-
-  &:hover ${HiddenContainer} {
-    & p {
-      color: #fff;
-    }
-
-    & button {
-      background: #272622;
       color: ${(props) => props.theme.primary};
-      border-color: ${(props) => props.theme.primary};
     }
   }
 
-  &:hover {
-    border: 1px solid ${(props) => props.theme.primary};
-    box-shadow: 0px 2px 8px -1px ${(props) => props.theme.primary};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    max-width: 100%;
+  &:hover ${ActionArea} {
+    & h2 {
+      color: ${(props) => props.theme.primary};
+    }
   }
 `;
