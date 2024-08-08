@@ -1,11 +1,11 @@
 import {
-  HiddenContainer,
-  ServiceArea,
+  ActionArea,
+  IconContainer,
   ServiceCardContainer,
   ServiceTab,
 } from './styled';
 import { ReactNode } from 'react';
-import Button from '@/components/Button';
+import ButtonLink from '@/components/ButtonLink';
 
 export interface ServiceProps {
   id: string;
@@ -22,14 +22,14 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
     <>
       <ServiceCardContainer>
-        <ServiceTab>{service.icon}</ServiceTab>
-        <ServiceArea>
+        <ServiceTab>
+          <IconContainer>{service.icon}</IconContainer>
+        </ServiceTab>
+        <ActionArea>
           <h2>{service.title}</h2>
-          <HiddenContainer>
-            <p>{service.description}</p>
-            <Button>Mais informações</Button>
-          </HiddenContainer>
-        </ServiceArea>
+          <p>{service.description}</p>
+          <ButtonLink url="#contact">Mais informações</ButtonLink>
+        </ActionArea>
       </ServiceCardContainer>
     </>
   );
