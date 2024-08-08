@@ -45,6 +45,7 @@ export const ActionArea = styled.div`
   transition: 10s ease;
 
   & h2 {
+    max-width: calc(100% - 160px - 2rem);
     transition: 0.5s ease;
   }
 
