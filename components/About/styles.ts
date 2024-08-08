@@ -11,14 +11,19 @@ export const AboutContainer = styled.div`
   min-height: calc(100vh - 90px);
   padding: 1rem 0;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    gap: 1rem;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     flex-direction: column-reverse;
+    gap: 4rem;
   }
 `;
 
 export const LeftPanel = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   flex: 2;
@@ -32,13 +37,15 @@ export const LeftPanel = styled.div`
 
 export const BackCard = styled.div`
   position: absolute;
-  top: -208px;
+  top: -48px;
+  right: 48px;
   display: flex;
   justify-content: stretch;
   z-index: 1;
-  width: 100%;
+  width: 43vw;
   max-width: 1024px;
   height: 300px;
+  margin-left: 48px;
   border: 1px solid ${(props) => props.theme.primary};
   border-radius: 8px;
 
@@ -50,21 +57,22 @@ export const BackCard = styled.div`
 `;
 
 export const AboutCard = styled.div`
-  position: absolute;
-  left: 64px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 2;
   gap: 2rem;
-  width: 100%;
+  width: 43vw;
   max-width: 1024px;
   padding: 2rem;
+  margin-left: 48px;
   background: ${(props) => props.theme.darkTwo};
   border-radius: 8px;
 
   & button {
-    max-width: 100%;
+    width: 100%;
+    max-width: 350px;
+    align-self: center;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -72,9 +80,10 @@ export const AboutCard = styled.div`
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    width: calc(100vw - 2rem);
+    width: 100%;
     position: relative;
     left: 0;
+    margin-left: 0;
   }
 `;
 
@@ -147,8 +156,11 @@ export const RightPanel = styled.div`
     justify-content: center;
   }
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin-left: 1rem;
+  }
+
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    flex-direction: row;
     margin-left: 0;
   }
 
@@ -238,18 +250,13 @@ export const Strip = styled.div`
 
 export const SocialMediaContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
   align-self: center;
-  gap: 1rem;
+  gap: 1.25rem;
   width: 100%;
   max-width: 400px;
   height: 100%;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    flex-direction: column;
-    align-self: flex-end;
-  }
 
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     flex-direction: row;
@@ -263,7 +270,7 @@ export const SocialMediaCard = styled.div`
   justify-content: center;
   align-items: center;
   background: ${(props) => props.theme.darkTwo};
-  border-radius: 50%;
+  border-radius: 8px;
   box-shadow: 0px 1px 4px ${(props) => props.theme.lightness};
   width: 64px;
   height: 64px;
