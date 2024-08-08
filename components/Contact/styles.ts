@@ -1,42 +1,97 @@
+import { Atkinson_Hyperlegible } from 'next/font/google';
 import styled from 'styled-components';
 
-export const ContactContainer = styled.section`
+export const ContactContainer = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100vw;
   height: 300px;
+  padding: 150px 16vw 0 16vw;
   background-image: linear-gradient(
-    132deg,
-    ${(props) => props.theme.darkTwo} 0%,
+    180deg,
+    ${(props) => props.theme.darkness} 0%,
     ${(props) => props.theme.primary} 100%
   );
-  box-shadow: 0px 4px 4px 1px ${(props) => props.theme.primary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.fk}) {
+    padding: 120px 8vw 0 8vw;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tk}) {
+    padding: 120px 128px 0 128px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.hd}) {
+    padding: 90px 96px 0 96px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    padding: 90px 64px 0 64px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    padding: 90px 48px 0 48px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding: 90px 32px 0 32px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    padding: 50px 16px 0 16px;
+  }
 `;
 
 export const ContactArea = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
   width: 100%;
-  height: 56px;
-  max-width: 700px;
-  transition: 0.3s ease;
 
-  & a {
-    display: flex;
-    align-items: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    flex-direction: column-reverse;
     justify-content: center;
-    width: 56px;
-    height: 56px;
-    border: 1px solid ${(props) => props.theme.primary};
-    border-radius: 8px;
-    color: ${(props) => props.theme.primary};
-    cursor: pointer;
-    background: #272622;
+    align-items: center;
+    gap: 2rem;
+  }
+`;
+
+export const ContactList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+`;
+
+export const ContactItem = styled.div`
+  display: flex;
+  gap: 4px;
+
+  & svg path {
+    color: #fff;
+  }
+`;
+export const LogoContainer = styled.div`
+  & img {
+    width: 50px;
+    height: auto;
+    object-fit: cover;
+  }
+`;
+
+export const Copy = styled.div`
+  padding-bottom: 1.5rem;
+
+  & p {
+    font-size: 1rem;
   }
 
-  & svg {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    & p {
+      font-size: 0.75rem;
+    }
   }
 `;

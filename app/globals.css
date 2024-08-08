@@ -49,6 +49,7 @@ span {
 
 @media (max-width: 1920px) {
   p,
+  span,
   button {
     font-size: 1.125rem;
   }
@@ -62,6 +63,7 @@ span {
 
 @media (max-width: 768px) {
   p,
+  span,
   button {
     font-size: 1rem;
   }
