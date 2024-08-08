@@ -3,13 +3,7 @@ import React from 'react';
 // Global components
 
 import Icon from '@mdi/react';
-import {
-  mdiCellphone,
-  mdiEmail,
-  mdiGithub,
-  mdiLinkedin,
-  mdiMapMarker,
-} from '@mdi/js';
+import { mdiCellphone, mdiEmail, mdiMapMarker } from '@mdi/js';
 import {
   ContactArea,
   ContactContainer,
