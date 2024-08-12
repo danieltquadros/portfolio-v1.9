@@ -100,10 +100,18 @@ const About = () => {
             <InformationContainer>
               <h2>Sobre mim</h2>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui
-                facilis laudantium obcaecati aperiam. Iste deleniti, labore sed
-                quae asperiores, doloribus dolor esse praesentium suscipit non
-                aliquam totam inventore porro ipsam.
+                Olá! Sou Elisiane Quadros, desenvolvedora web, front-end e
+                mobile com três anos de experiência e especialista em criar
+                interfaces intuitivas e responsivas, utilizo tecnologias
+                modernas como JavaScript, TypeScript, React, Next.js, React
+                Native e Kotlin para entregar soluções de alta qualidade.
+              </p>
+              <p>
+                Sou movida por desafios e inovação, sempre buscando novas
+                tecnologias para aprimorar a acessibilidade e a eficiência dos
+                meus projetos. Minhas habilidades em comunicação e trabalho em
+                equipe permitem uma colaboração eficaz, garantindo resultados
+                excepcionais.
               </p>
             </InformationContainer>
             <Button>Entre em contato</Button>

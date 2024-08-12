@@ -90,11 +90,7 @@ export const AboutCard = styled.div`
 export const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-
-  & p {
-    text-align: center;
-  }
+  gap: 1rem;
 
   & h2 {
     font-size: 9.5rem;
